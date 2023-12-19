@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="fondo" stylesheets="@styleMenuPrincipal.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nerydelacruz.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Hospital.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="381.0" layoutY="39.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" text="Especialidades" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reportes Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="145.0" fitWidth="211.0" layoutX="-21.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@2606512_5851-PhotoRoom.png-PhotoRoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="42.0" layoutX="553.0" layoutY="5.0" onMouseClicked="#cerrarAplicacion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cerrar-PhotoRoom.png-PhotoRoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="518.0" layoutY="2.0" onMouseClicked="#maximizarAplicacion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@maximizar-PhotoRoom.png-PhotoRoom.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="482.0" layoutY="4.0" onMouseClicked="#minimizarAplicacion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@minimizar-PhotoRoom.png-PhotoRoom.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4095918-1168-405a-b71f-030288537920">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from medicina]]>
+	</queryString>
+	<field name="id_medicina" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="marca" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="1" y="0" width="571" height="651" uuid="5b0f0913-ca8d-4de2-acc9-8305a1016069"/>
+				<imageExpression><![CDATA["C:\\Users\\neryd\\IdeaProjects\\Hospital\\src\\org\\nerydelacruz\\report\\14547779_rm222-mind-14.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="117" y="15" width="432" height="44" uuid="7f223c36-cdff-4f03-a25f-86b4418fc844"/>
+				<textElement>
+					<font fontName="Copperplate Gothic Bold" size="30"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+			<image>
+				<reportElement x="30" y="0" width="68" height="79" uuid="af062dd5-7884-46d9-a2c4-d784afa5349f"/>
+				<imageExpression><![CDATA["C:\\Users\\neryd\\IdeaProjects\\Hospital\\src\\org\\nerydelacruz\\report\\icon.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="0" width="267" height="35" uuid="d8077cf0-f72a-4737-ae08-bbb48eb9d48f"/>
+				<textElement>
+					<font fontName="Century" size="24"/>
+				</textElement>
+				<text><![CDATA[Reporte del Hospital]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="65" backcolor="#00E0A9" uuid="0d984c50-016d-4c15-8c12-1d304c72b3d6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="20" uuid="d95b4c98-0c6e-4af3-84b8-2c3aa5d163db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Medicina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="30" width="119" height="20" uuid="b01b9cff-a4a9-4ae2-b341-73d085d0bb29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="30" width="79" height="20" uuid="f0998361-ddd6-4ad5-ac18-5ad426169625"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="5" width="100" height="20" uuid="e629ac64-421c-45a5-81d7-cfdd0e88811e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id_medicina}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="24" width="572" height="1" forecolor="#E7C457" uuid="0bdf0913-afe0-4f55-b6f5-b43c8a72c9b7"/>
+			</line>
+			<textField>
+				<reportElement x="106" y="4" width="100" height="20" uuid="931ee356-14cf-4708-8afa-5b3aed45a277"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="4" width="100" height="20" uuid="5585876c-d38a-49fa-9496-73248031f6cd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="48" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="11" width="230" height="28" uuid="31a0b4f0-e985-4875-83c1-3855a1e336fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="Bauhaus 93" size="15"/>
+				</textElement>
+				<text><![CDATA[Hospital de Infectologia]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
