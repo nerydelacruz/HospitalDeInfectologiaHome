@@ -6,7 +6,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
+
+import com.jcraft.jsch.JSch;
 import com.mysql.cj.jdbc.Driver;
+
 
 
 public class Conexion {
@@ -16,6 +19,7 @@ public class Conexion {
     
     public Conexion(){
         try{
+            JSch jsch = new JSch();
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/hospital_de_infectologia","root","admin");
         }catch(ClassNotFoundException e){
